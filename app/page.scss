@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+}
+
+/* 🌙 modo dark */
+.dark {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: white;
+}
+
+/* ☀️ modo light */
+.container:not(.dark) {
+  background: #f1f5f9;
+  color: #020617;
+}
+
+.title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.btn-new {
+  margin-top: 20px;
+  padding: 12px 22px;
+  background: #6366f1;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-new:hover {
+  transform: scale(1.05);
+}
+
+.theme-btn {
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  border: none;
+  background: #111827;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
