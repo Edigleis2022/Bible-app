@@ -4,20 +4,24 @@
   border-radius: 12px;
   max-width: 500px;
   text-align: center;
-  box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
-  animation: fadeIn 0.6s ease;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+
+  /* animação */
+  animation: fadeSlide 0.6s ease;
+  transition: 0.4s;
 }
 
-@keyframes fadeIn {
+@keyframes fadeSlide {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(25px) scale(0.98);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
-  }  
+    transform: translateY(0) scale(1);
+  }
 }
+
 
 /* texto padrão (modo dark) */
 .text {
@@ -40,5 +44,10 @@
 
 .container:not(.dark) .ref {
   color: #475569;
+}
+
+.verse-card:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 20px 60px rgba(99,102,241,0.25);
 }
 
