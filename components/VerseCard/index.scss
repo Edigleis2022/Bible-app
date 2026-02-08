@@ -16,5 +16,29 @@
   to {
     opacity: 1;
     transform: translateY(0);
-  }
+  }  
 }
+
+/* texto padrão (modo dark) */
+.text {
+  color: white;
+}
+
+/* referencia */
+.ref {
+  color: #cbd5e1;
+}
+
+/* 🌞 quando estiver no modo light */
+.container:not(.dark) .verse-card {
+  background: white;
+}
+
+.container:not(.dark) .text {
+  color: #020617;
+}
+
+.container:not(.dark) .ref {
+  color: #475569;
+}
+
