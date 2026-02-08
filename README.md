@@ -20,7 +20,7 @@ Aplicação desenvolvida para fortalecer a mente e exibir versículos bíblicos 
 
 ## 🌐 Deploy
 
-[Clique aqui para ver meu projeto](https://aplicativo bíblico-orcin.vercel.app)
+[Clique aqui para ver meu projeto](https://aplicativobíblico-orcin.vercel.app)
 
 ## 👨‍💻 Autor
 
