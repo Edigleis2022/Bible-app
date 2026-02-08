@@ -5,6 +5,8 @@ import VerseCard from '@/components/VerseCard'
 import { verses } from '@/data/verses'
 import { Verse } from '@/types/verse'
 import './page.scss'
+import Link from 'next/link'
+
 
 export default function Home() {
 
@@ -18,9 +20,23 @@ export default function Home() {
 
   // ❤️ Lista de favoritos
   const [favorites, setFavorites] = useState<Verse[]>([])
+  
+
 
   // 🌙 Tema escuro
-  const [dark, setDark] = useState(true)
+  const [dark, setDark] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme === "dark";
+  });
+
+  // carregar favoritos salvos
+useEffect(() => {
+  const saved = localStorage.getItem("favorites");
+  if (saved) {
+    setFavorites(JSON.parse(saved));
+  }
+}, []);
+
 
   // 📦 Carregar favoritos do localStorage quando abrir app
   useEffect(() => {
@@ -36,13 +52,14 @@ export default function Home() {
 
   // 💾 Sempre que favoritos mudar, salva no navegador
   useEffect(() => {
-    localStorage.setItem('favorites', JSON.stringify(favorites))
-  }, [favorites])
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  }, [favorites]);
 
   // 💾 Salvar tema
   useEffect(() => {
-    localStorage.setItem('theme', dark ? 'dark' : 'light')
-  }, [dark])
+    localStorage.setItem("theme", dark ? "dark" : "light");
+  }, [dark]);
+
 
   // 🔁 Novo versículo
   function newVerse() {
@@ -72,6 +89,10 @@ export default function Home() {
   return (
     <main className={dark ? "container dark" : "container"}>
       <h1 className="title">📖 Bible App</h1>
+
+      <Link href="/favorites">
+        <button className="btn-fav-page">Ver favoritos ⭐</button>
+      </Link>
 
       {/* botão tema */}
       <button className="theme-btn" onClick={() => setDark(!dark)}>
