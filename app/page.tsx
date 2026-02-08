@@ -8,6 +8,9 @@ import './page.scss'
 
 export default function Home() {
 
+  const [loading, setLoading] = useState(false)
+
+
   // 🎯 Versículo aleatório inicial
   const [index, setIndex] = useState(
     Math.floor(Math.random() * verses.length)
@@ -43,9 +46,15 @@ export default function Home() {
 
   // 🔁 Novo versículo
   function newVerse() {
+  setLoading(true)
+
+  setTimeout(() => {
     const random = Math.floor(Math.random() * verses.length)
     setIndex(random)
-  }
+    setLoading(false)
+  }, 400) // tempo da animação
+}
+
 
   // ❤️ Favoritar versículo
   function toggleFavorite(verse: Verse) {
@@ -65,24 +74,20 @@ export default function Home() {
       <h1 className="title">📖 Bible App</h1>
 
       {/* botão tema */}
-      <button 
-        className="theme-btn"
-        onClick={() => setDark(!dark)}
-      >
+      <button className="theme-btn" onClick={() => setDark(!dark)}>
         {dark ? "🌙 Dark" : "☀️ Light"}
       </button>
 
-      <VerseCard 
+      <VerseCard
         verse={verses[index]}
         onFavorite={toggleFavorite}
-        isFavorite={
-          favorites.some(v => v.id === verses[index].id)
-        }
+        isFavorite={favorites.some((v) => v.id === verses[index].id)}
+        loading={loading}
       />
 
       <button className="btn-new" onClick={newVerse}>
         Novo versículo
       </button>
     </main>
-  )
+  );
 }

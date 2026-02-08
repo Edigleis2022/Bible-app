@@ -29,31 +29,38 @@ body {
   margin-bottom: 20px;
 }
 
-.btn-new {
-  margin-top: 25px;
-  padding: 14px 28px;
-  background: linear-gradient(45deg,#6366f1,#4f46e5);
-  border: none;
-  border-radius: 10px;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0 10px 30px rgba(99,102,241,0.4);
+.btn-new{
+  background: linear-gradient(135deg,#7c3aed,#6366f1);
+  border:none;
+  padding:14px 28px;
+  border-radius:14px;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+  margin-top:20px;
+  transition:0.3s;
 }
 
-.btn-new:hover {
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 20px 50px rgba(99,102,241,0.6);
+.btn-new:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 20px rgba(99,102,241,0.6);
 }
 
-.theme-btn {
-  margin-bottom: 20px;
-  padding: 8px 16px;
-  border: none;
-  background: #111827;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
+
+.theme-btn{
+  background: linear-gradient(135deg,#6366f1,#4f46e5);
+  border:none;
+  padding:12px 22px;
+  border-radius:12px;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  margin-bottom:20px;
+  transition:0.3s;
 }
+
+.theme-btn:hover{
+  transform:scale(1.05);
+}
+
