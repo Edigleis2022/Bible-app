@@ -3,7 +3,7 @@
 Aplicação web desenvolvida com foco em fortalecer a mente através de versículos bíblicos e prática de desenvolvimento moderno com React e Next.js.
 
 ## 🚀 Demonstração online
-🔗 https://[SEU-LINK-VERCEL.vercel.app](https://bible-app-orcin.vercel.app/)
+🔗 https://[Meu Projeto no Versel App](https://bible-app-orcin.vercel.app/)
 
 ## 🧠 Sobre o projeto
 O Bible App foi criado para exibir versículos bíblicos de forma dinâmica e inspiradora, com uma interface moderna e experiência fluida.
