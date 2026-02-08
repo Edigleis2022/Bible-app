@@ -24,19 +24,16 @@ export default function Home() {
 
 
   // 🌙 Tema escuro
-  const [dark, setDark] = useState(() => {
-    const savedTheme = localStorage.getItem("theme");
-    return savedTheme === "dark";
-  });
+  // começa false
+const [dark, setDark] = useState(false)
 
-  // carregar favoritos salvos
+// carrega tema só no navegador
 useEffect(() => {
-  const saved = localStorage.getItem("favorites");
-  if (saved) {
-    setFavorites(JSON.parse(saved));
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    setDark(true);
   }
 }, []);
-
 
   // 📦 Carregar favoritos do localStorage quando abrir app
   useEffect(() => {
