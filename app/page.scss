@@ -24,22 +24,34 @@ body {
   color: #020617;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 25px 0;
+  align-items: center;
+}
+
+.buttons button {
+  width: 240px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #6366f1;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buttons button:hover {
+  transform: scale(1.05);
+  background: #4f46e5;
+}
+
 .title {
   font-size: 32px;
   margin-bottom: 20px;
-}
-
-.btn-new{
-  background: linear-gradient(135deg,#7c3aed,#6366f1);
-  border:none;
-  padding:14px 28px;
-  border-radius:14px;
-  color:white;
-  font-size:16px;
-  font-weight:bold;
-  cursor:pointer;
-  margin-top:20px;
-  transition:0.3s;
 }
 
 .btn-new:hover{
@@ -47,18 +59,6 @@ body {
   box-shadow:0 0 20px rgba(99,102,241,0.6);
 }
 
-
-.theme-btn{
-  background: linear-gradient(135deg,#6366f1,#4f46e5);
-  border:none;
-  padding:12px 22px;
-  border-radius:12px;
-  color:white;
-  font-weight:bold;
-  cursor:pointer;
-  margin-bottom:20px;
-  transition:0.3s;
-}
 
 .theme-btn:hover{
   transform:scale(1.05);
