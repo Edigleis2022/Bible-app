@@ -83,7 +83,7 @@ export const verses: Verse[] = [
     reference: "Salmos 23:1"
   },
   {
-    id:16,
+    id:17,
     text: "Se Deus é por nós, quem será contra nós?",
     reference: "Romanos 8:31"
   }

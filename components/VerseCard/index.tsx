@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react"
+import { getRandomVerse } from "@/app/services/bibleApi"
 import { Verse } from "@/types/verse"
 import './index.scss'
 
@@ -8,10 +10,10 @@ type Props = {
   loading: boolean
 }
 
-
 export default function VerseCard({ verse, onFavorite, isFavorite, loading }: Props) {
 
-  if (loading) {
+
+  if (loading ) {
     return (
       <div className="verse-card loading">
         <div className="spinner"></div>
@@ -25,7 +27,7 @@ export default function VerseCard({ verse, onFavorite, isFavorite, loading }: Pr
       <p className="text">"{verse.text}"</p>
       <span className="ref">{verse.reference}</span>
 
-      <button 
+      <button
         className="fav-btn"
         onClick={() => onFavorite(verse)}
       >
@@ -33,7 +35,4 @@ export default function VerseCard({ verse, onFavorite, isFavorite, loading }: Pr
       </button>
     </div>
   )
-
-  
 }
-

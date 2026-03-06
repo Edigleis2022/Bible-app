@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import VerseCard from "@/components/VerseCard";
 import { verses } from "@/data/verses";
 import { Verse } from "@/types/verse";
+import { getRandomVerse } from "@/app/services/bibleApi";
 import "./page.scss";
 import Link from "next/link";
 
@@ -41,7 +42,7 @@ export default function Home() {
   const [verseDay, setVerseDay] = useState<Verse | null>(null);
 
   // 🎯 Versículo aleatório inicial
-  const [index, setIndex] = useState(Math.floor(Math.random() * verses.length));
+  const [index, setIndex] = useState(0);
 
   // ❤️ Lista de favoritos
   const [favorites, setFavorites] = useState<Verse[]>([]);
@@ -85,16 +86,26 @@ export default function Home() {
     setVerseDay(verse);
   }, []);
 
+
+  useEffect(() => {
+  const random = Math.floor(Math.random() * verses.length);
+  setIndex(random);
+}, []);
+
   // 🔁 Novo versículo
   function newVerse() {
-    setLoading(true);
 
-    setTimeout(() => {
-      const random = Math.floor(Math.random() * verses.length);
-      setIndex(random);
-      setLoading(false);
-    }, 400); // tempo da animação
-  }
+  setCurrentVerse(null); // limpa versículo da API
+
+  setLoading(true);
+
+  setTimeout(() => {
+    const randomVerse = Math.floor(Math.random() * verses.length);
+    setIndex(randomVerse);
+    setLoading(false);
+  }, 400);
+
+}
 
   // ❤️ Favoritar versículo
   function toggleFavorite(verse: Verse) {
@@ -113,24 +124,22 @@ export default function Home() {
     try {
       setLoading(true);
 
-      const res = await fetch("https://bible-api.com/john+3:16");
-      const data = await res.json();
+      const verseApi = await getRandomVerse();
 
-      const verseApi = {
-        id: Date.now(),
-        text: data.text,
-        reference: data.reference,
-      };
-
-      // coloca como versículo atual
       setCurrentVerse(verseApi);
-
-      setLoading(false);
     } catch (error) {
       console.log("Erro ao buscar versículo", error);
+
+      const randomVerse = verses[Math.floor(Math.random() * verses.length)];
+
+      setCurrentVerse(randomVerse);
+    } finally {
       setLoading(false);
     }
   }
+
+const verseToShow =
+  currentVerse || verses[index] || verseDay;
   
   return (
     <main className={dark ? "container dark" : "container"}>
@@ -154,13 +163,11 @@ export default function Home() {
         </button>
       </div>
 
-      {(currentVerse || verseDay) && (
+      {verseToShow && (
         <VerseCard
-          verse={currentVerse || verseDay!}
+          verse={verseToShow}
           onFavorite={toggleFavorite}
-          isFavorite={favorites.some(
-            (v) => v.id === (currentVerse || verseDay!)?.id,
-          )}
+          isFavorite={favorites.some((v) => v.id === verseToShow.id)}
           loading={loading}
         />
       )}
