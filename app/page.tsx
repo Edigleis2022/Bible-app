@@ -81,12 +81,13 @@ export default function Home() {
     localStorage.setItem("theme", dark ? "dark" : "light");
   }, [dark]);
 
+  // 📖 Carrega o versículo do dia (salvo no localStorage)
   useEffect(() => {
     const verse = getVerseOfDay(verses);
     setVerseDay(verse);
   }, []);
 
-
+  // 🎲 Define um versículo aleatório inicial ao abrir o app
   useEffect(() => {
   const random = Math.floor(Math.random() * verses.length);
   setIndex(random);
