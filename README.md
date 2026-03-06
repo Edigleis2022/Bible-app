@@ -8,6 +8,8 @@ Aplicação web desenvolvida com foco em fortalecer a mente através de versícu
 ## 🧠 Sobre o projeto
 O Bible App foi criado para exibir versículos bíblicos de forma dinâmica e inspiradora, com uma interface moderna e experiência fluida.
 
+Os versículos são obtidos através do consumo da API pública Bible-API.com, utilizando requisições HTTP e tratamento de dados em formato JSON.
+
 Este projeto faz parte do meu portfólio como desenvolvedor Front-end em formação, com foco em aplicações reais e bem estruturadas.
 
 ## ✨ Funcionalidades
