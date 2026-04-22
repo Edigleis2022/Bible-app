@@ -1,44 +1,128 @@
+Boa pergunta — e vou ser direto: seu README já está bom, mas ainda está com cara de **projeto de estudo isolado**.
+
+Se você quer evoluir para **backend + mobile (nível profissional)**, ele precisa mostrar:
+
+* visão de sistema completo
+* escalabilidade
+* organização de arquitetura
+
+Aqui vai uma versão **melhorada, mais profissional e preparada pro futuro do seu projeto** 👇
+
+---
+
 # 📖 Bible App
 
-Aplicação web desenvolvida com foco em fortalecer a mente através de versículos bíblicos e prática de desenvolvimento moderno com React e Next.js.
+Aplicação fullstack em evolução, desenvolvida para proporcionar uma experiência simples e inspiradora de leitura de versículos bíblicos, utilizando tecnologias modernas no **web, backend e mobile**.
 
-## 🚀 Demonstração online
-🔗 https://[Meu Projeto no Versel App](https://bible-app-orcin.vercel.app/)
+---
 
-## 🧠 Sobre o projeto
-O Bible App foi criado para exibir versículos bíblicos de forma dinâmica e inspiradora, com uma interface moderna e experiência fluida.
+## 🚀 Sobre o projeto
 
-Os versículos são obtidos através do consumo da API pública Bible-API.com, utilizando requisições HTTP e tratamento de dados em formato JSON.
+O **Bible App** é uma aplicação que permite visualizar, favoritar e interagir com versículos bíblicos de forma dinâmica.
 
-Este projeto faz parte do meu portfólio como desenvolvedor Front-end em formação, com foco em aplicações reais e bem estruturadas.
+Inicialmente desenvolvido como uma aplicação web consumindo API pública, o projeto está evoluindo para uma arquitetura completa com:
 
-## ✨ Funcionalidades
-- 📖 Versículo aleatório
-- ❤️ Sistema de favoritos
-- 💾 Salvamento no navegador (localStorage)
-- 🌙 Tema dark/light
-- 🔁 Atualização dinâmica de versículos
-- ⭐ Página exclusiva de favoritos
-- 🎨 Interface moderna e responsiva
-- ☁️ Deploy profissional na Vercel
+* 🔧 Backend próprio (API REST com Spring Boot)
+* 🌐 Frontend web com React / Next.js
+* 📱 Aplicação mobile com React Native
 
-## 🛠️ Tecnologias utilizadas
-- Next.js
-- React
-- TypeScript
-- SCSS
-- Git e GitHub
-- Vercel
+O objetivo é transformar o projeto em uma solução completa, escalável e multiplataforma.
 
-## 📱 Objetivo
-Este projeto foi desenvolvido com o objetivo de:
-- Evoluir minhas habilidades como desenvolvedor
-- Construir um portfólio profissional
-- Demonstrar organização e boas práticas de código
-- Criar aplicações reais e funcionais
+---
+
+## 🧠 Motivação
+
+Este projeto faz parte da minha evolução como desenvolvedor, com foco em:
+
+* Construção de aplicações reais
+* Integração entre frontend, backend e mobile
+* Boas práticas de arquitetura e organização de código
+* Preparação para o mercado de desenvolvimento fullstack
+
+---
+
+## ✨ Funcionalidades atuais (Web)
+
+* 📖 Exibição de versículo aleatório
+* ❤️ Sistema de favoritos
+* 💾 Persistência com localStorage
+* 🌙 Tema dark/light
+* 🔁 Atualização dinâmica de versículos
+* ⭐ Página de favoritos
+* 🎨 Interface responsiva
+
+---
+
+## 🔄 Próximas implementações
+
+### 🔧 Backend (Spring Boot)
+
+* API própria de versículos
+* Banco de dados (H2 → PostgreSQL)
+* Sistema de busca por livro/capítulo
+* Endpoints REST estruturados
+* Autenticação de usuários (futuro)
+
+### 📱 Mobile (React Native)
+
+* Consumo da API própria
+* Interface otimizada para dispositivos móveis
+* Sistema de favoritos sincronizado
+* Funcionalidade offline
+
+---
+
+## 🛠️ Tecnologias
+
+### 🌐 Frontend
+
+* Next.js
+* React
+* TypeScript
+* SCSS
+
+### 🔧 Backend (em desenvolvimento)
+
+* Java
+* Spring Boot
+* JPA / Hibernate
+* H2 Database
+
+### 📱 Mobile (em desenvolvimento)
+
+* React Native
+
+### ☁️ DevOps
+
+* Git & GitHub
+* Vercel
+
+---
+
+## 🚀 Demonstração
+
+🔗 Em breve versão atualizada com backend integrado
+
+---
+
+## 🎯 Objetivo
+
+* Evoluir como desenvolvedor Fullstack
+* Construir um projeto escalável e real
+* Demonstrar habilidades técnicas na prática
+* Criar uma aplicação útil e acessível
+
+---
 
 ## 👨‍💻 Autor
-Desenvolvido por Edigleis Pereira
 
-🔗 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/edigleis-pereira)
-🔗 GitHub: https://github.com/Edigleis2022
+Desenvolvido por **Edigleis Pereira**
+
+* 🔗 GitHub: [https://github.com/Edigleis2022](https://github.com/Edigleis2022)
+* 🔗 LinkedIn: (adicione seu link aqui)
+
+---
+
+## 📌 Status do Projeto
+
+🚧 Em evolução contínua — migração de API pública para backend próprio em andamento.
