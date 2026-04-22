@@ -1,15 +1,3 @@
-Boa pergunta — e vou ser direto: seu README já está bom, mas ainda está com cara de **projeto de estudo isolado**.
-
-Se você quer evoluir para **backend + mobile (nível profissional)**, ele precisa mostrar:
-
-* visão de sistema completo
-* escalabilidade
-* organização de arquitetura
-
-Aqui vai uma versão **melhorada, mais profissional e preparada pro futuro do seu projeto** 👇
-
----
-
 # 📖 Bible App
 
 Aplicação fullstack em evolução, desenvolvida para proporcionar uma experiência simples e inspiradora de leitura de versículos bíblicos, utilizando tecnologias modernas no **web, backend e mobile**.
