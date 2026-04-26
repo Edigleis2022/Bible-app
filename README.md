@@ -106,9 +106,9 @@ Este projeto faz parte da minha evolução como desenvolvedor, com foco em:
 
 Desenvolvido por **Edigleis Pereira**
 
-* 🔗 GitHub: [https://github.com/Edigleis2022](https://github.com/Edigleis2022)
-* 🔗 LinkedIn: www.linkedin.com/in/edigleis-pereira
-* 🔗 Vercel: bible-app-orcin.vercel.app
+* 🔗 **GitHub:** [Edigleis2022](https://github.com/Edigleis2022)
+* 🔗 **LinkedIn:** [edigleis-pereira](https://www.linkedin.com/in/edigleis-pereira)
+* 🔗 **Deploy (Vercel):** [bible-app-orcin.vercel.app](https://bible-app-orcin.vercel.app)
 
 ---
 
